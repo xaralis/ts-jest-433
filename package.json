@@ -1,0 +1,46 @@
+{
+  "name": "testrepo",
+  "version": "0.0.0",
+  "scripts": {
+    "test": "jest",
+    "test-watch": "jest --watch"
+  },
+  "private": true,
+  "author": "Fragaria s.r.o.",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/d21dev/d21-web-platform",
+  "dependencies": {
+    "@angular/common": "^5.0.5",
+    "@angular/compiler": "^5.0.5",
+    "@angular/core": "^5.0.5",
+    "@angular/platform-browser": "^5.0.5",
+    "rxjs": "^5.5.2",
+    "typescript": "^2.5.3"
+  },
+  "devDependencies": {
+    "@angular/compiler-cli": "^5.0.5",
+    "@angular/platform-browser-dynamic": "^5.0.5",
+    "jest": "^22.1.4",
+    "jest-preset-angular": "^5.0.0",
+    "zone.js": "^0.8.18"
+  },
+  "engines": {
+    "node": "8.1.4"
+  },
+  "jest": {
+    "preset": "jest-preset-angular",
+    "setupTestFrameworkScriptFile": "<rootDir>/src/jest-setup.ts",
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "./tsconfig.spec.json"
+      },
+      "__TRANSFORM_HTML__": true
+    },
+    "moduleNameMapper": {
+      "^app/(.*)": "<rootDir>/src/app/$1"
+    },
+    "testRegex": "(/__tests__/.*|\\.(spec))\\.(ts)$",
+    "testURL": "http://localhost:2100",
+    "restoreMocks": true
+  }
+}
