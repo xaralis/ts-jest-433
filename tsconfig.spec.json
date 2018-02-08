@@ -1,8 +1,6 @@
 {
     "compileOnSave": false,
     "compilerOptions": {
-        "allowJs": true,
-        "outDir": "./aot/test/out-tsc",
         "baseUrl": "src",
         "sourceMap": true,
         "declaration": false,
@@ -13,8 +11,6 @@
         "target": "es5",
         "paths": {
             "@angular/*": ["../node_modules/@angular/*"],
-            "lodash": ["../node-modules/lodash"],
-            "ngx-toastr": ["../node-modules/ngx-toastr"],
             "rxjs/*": ["../node-modules/rxjs/*"]
         },
         "typeRoots": [
@@ -24,24 +20,9 @@
             "es2017",
             "dom"
         ],
-        "strict": true,
-        "plugins": [
-            {"name": "@angular/language-service"}
-        ]
+        "strict": true
     },
     "exclude": [
-        "aot/**/*",
-        "!aot/test/",
-        "node_modules",
-        "e2e",
-        "dist"
-    ],
-    "angularCompilerOptions": {
-        "genDir": "./aot/test",
-        "entryModule": "src/app/app.module#AppModule",
-        "i18nInFormat": "xlf",
-        "i18nInLocale": "en",
-        "i18nInFile": "src/assets/i18n/en/d21-web-platform.xlf",
-        "i18nInMissingTranslations": "ignore"
-    }
+        "node_modules"
+    ]
 }
